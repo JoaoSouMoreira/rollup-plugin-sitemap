@@ -10,7 +10,7 @@ export default function generateSitemap(config = {}) {
 
       fs.writeFile(`${path.resolve(__dirname, '../../..')}/${config.contentBase || 'public'}/sitemap.xml`, routesXML, (error) => {
         if (error) {
-          return console.log(err);
+          return console.log(error);
         }
       });
     }
