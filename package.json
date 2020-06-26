@@ -1,0 +1,17 @@
+{
+  "name": "rollup-plugin-sitemap",
+  "version": "1.0.0",
+  "description": "A rollup plugin to generate sitemap.xml files based on a routes object",
+  "main": "dist/rollup-plugin-sitemap.cjs.js",
+  "module": "dist/rollup-plugin-sitemap.es.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node_modules/.bin/rollup --config rollup.config.js",
+    "postinstall": "npm run build"
+  },
+  "author": "Joao Moreira (joaosomoreira@gmail.com)",
+  "license": "ISC",
+  "dependencies": {
+    "rollup": "^2.18.0"
+  }
+}
