@@ -5,10 +5,15 @@ export default function generateSitemap(config = {}) {
   return {
     name: 'plugin-sitemap',
     buildEnd() {
+      const dir = `${process.cwd()}/${config.contentBase || 'public'}`;
       const routes = getRoutesList(config);
       const routesXML = getRoutesXML(routes);
 
-      fs.writeFile(`${process.cwd()}/${config.contentBase || 'public'}/sitemap.xml`, routesXML, (error) => {
+      if (!fs.existsSync(dir)){
+        fs.mkdirSync(dir);
+    }
+
+      fs.writeFile(`${dir}/sitemap.xml`, routesXML, (error) => {
         if (error) {
           return console.log(error);
         }
