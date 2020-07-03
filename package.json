@@ -1,6 +1,6 @@
 {
   "name": "rollup-plugin-sitemap",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A rollup plugin to generate sitemap.xml files based on a routes object",
   "main": "dist/rollup-plugin-sitemap.cjs.js",
   "module": "dist/rollup-plugin-sitemap.es.js",

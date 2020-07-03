@@ -8,7 +8,7 @@ export default function generateSitemap(config = {}) {
       const routes = getRoutesList(config);
       const routesXML = getRoutesXML(routes);
 
-      fs.writeFile(`${path.resolve(__dirname, '../../..')}/${config.contentBase || 'public'}/sitemap.xml`, routesXML, (error) => {
+      fs.writeFile(`${process.cwd()}/${config.contentBase || 'public'}/sitemap.xml`, routesXML, (error) => {
         if (error) {
           return console.log(error);
         }
